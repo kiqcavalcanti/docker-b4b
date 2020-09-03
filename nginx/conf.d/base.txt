@@ -1,0 +1,40 @@
+  listen          80;
+
+  # Useful logs for debug.
+  access_log      /var/log/nginx/b4b/access.log;
+  error_log       /var/log/nginx/b4b/error.log;
+
+  client_max_body_size 2000m;
+  rewrite_log     on;
+
+  # Point index to the Laravel front controller.
+  index           index.php;
+
+  location / {
+      # URLs to attempt, including pretty ones.
+      try_files   $uri $uri/ /index.php?$query_string;
+  }
+
+  # Remove trailing slash to please routing system.
+  if (!-d $request_filename) {
+      rewrite     ^/(.+)/$ /$1 permanent;
+  }
+
+  # PHP FPM configuration.
+  location ~* \.php$ {
+          fastcgi_pass                    unix:/var/run/php/php7.4-fpm.sock;
+          fastcgi_index                   index.php;
+          fastcgi_split_path_info         ^(.+\.php)(.*)$;
+          include                         /etc/nginx/fastcgi_params;
+          fastcgi_param                   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  }
+
+  # We don't need .ht files with nginx.
+  location ~ /\.ht {
+          deny all;
+  }
+
+  # Set header expirations on per-project basis
+  location ~* \.(?:ico|css|js|jpe?g|JPG|png|svg|woff)$ {
+          expires 365d;
+  }

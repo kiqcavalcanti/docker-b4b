@@ -1,0 +1,14 @@
+127.0.0.1       localhost
+127.0.0.1       ai.platafoor.local
+127.0.0.1       financial.platafoor.local
+127.0.0.1       auth.platafoor.local
+127.0.0.1       crm.platafoor.local
+127.0.0.1       sac.platafoor.local
+127.0.0.1       marketing.platafoor.local
+127.0.0.1       pop-integrations.pop.local
+127.0.0.1       core.platafoor.local
+127.0.0.1       affiliate.platafoor.local
+
+# Added by Docker Desktop
+192.168.15.2 host.docker.internal
+192.168.15.2 gateway.docker.internal
