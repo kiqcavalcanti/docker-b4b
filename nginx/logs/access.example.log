@@ -603,3 +603,4 @@
 172.19.0.1 - - [03/Sep/2020:19:27:59 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://financial.platafoor.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 172.19.0.1 - - [03/Sep/2020:19:55:08 +0000] "GET / HTTP/1.1" 500 577475 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 172.19.0.1 - - [03/Sep/2020:19:55:08 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://financial.platafoor.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+172.19.0.1 - - [03/Sep/2020:22:41:45 +0000] "GET / HTTP/1.1" 499 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
