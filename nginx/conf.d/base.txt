@@ -1,9 +1,5 @@
   listen          80;
 
-  # Useful logs for debug.
-  access_log      /var/log/nginx/b4b/access.log;
-  error_log       /var/log/nginx/b4b/error.log;
-
   client_max_body_size 2000m;
   rewrite_log     on;
 
